@@ -55,11 +55,7 @@ AFRAME.registerComponent('registerevents', {
             follower.object3D.quaternion.slerp(this.q, lerpAmount);
 			follower.object3D.scale.lerp(this.s, lerpAmount);
             
-            followerPlane.setAttribute("color", "green");
-        } 
-        else
-        {
-            followerPlane.setAttribute("color", "red");            
+                  
         }
     }
 });
@@ -84,7 +80,7 @@ AFRAME.registerComponent('registerevents', {
                position="0 0 0"
                rotation="-90 0 0"
                color = "green"
-               material="src:#grid; transparent: true; opacity: 0.50; side:double; visible:false;">
+               material="src:#grid; transparent: true; opacity: 0.95; side:double; visible:false;">
         </a-plane>
     </a-entity>
         
