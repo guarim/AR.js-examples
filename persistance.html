@@ -70,22 +70,18 @@ AFRAME.registerComponent('registerevents', {
     </a-marker>
 	
    
-    <a-assets>
-		<video id="grid" src="robot.mp4" />
+    	<a-assets>
+		<video id="grid" autoplay loop="true" src="robot.mp4" />
 	</a-assets>
 
     <a-marker type="pattern" url="data/kanji.patt" id="baseMarker" registerevents>
     </a-marker>
     
-    <!-- 
-        this entity will move (lerp) towards the marker when visible;
-        turns green when marker visible, red when marker not visible
-    -->
     <a-entity id="follower" active="0">
         <a-plane id="followerPlane"
                position="0 0 0"
                rotation="-90 0 0"
-               material="src:#grid; side:double; visible:false;">
+               material="src:#grid;">
         </a-plane>
     </a-entity>
         
