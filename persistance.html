@@ -69,23 +69,26 @@ AFRAME.registerComponent('registerevents', {
     <a-marker type="pattern" url="data/kanji.patt" id="baseMarker" registerevents>
     </a-marker>
 	
-     <a-assets>
-	<a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
-    </a-assets>
-	
+   
+    <a-assets>
+		<img id="grid" src="images/earth-sphere.jpg" />
+	</a-assets>
+
+    <a-marker type="pattern" url="data/kanji.patt" id="baseMarker" registerevents>
+    </a-marker>
+    
     <!-- 
         this entity will move (lerp) towards the marker when visible;
         turns green when marker visible, red when marker not visible
     -->
-	
     <a-entity id="follower" active="0">
-	     <a-entity
-      		 position="0 0 0" 
-                 rotation="0 0 0"
-                 scale="0.10 0.10 0.10"
-                 gltf-model="#tree" >
-	     </a-entity
+        <a-plane id="followerPlane"
+               position="0 0 0"
+               rotation="-90 0 0"
+               material="src:#grid; transparent: true; opacity: 0.95; side:double; visible:false;">
+        </a-plane>
     </a-entity>
+        
         
     
     <a-entity camera></a-entity>
