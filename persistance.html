@@ -68,17 +68,20 @@ AFRAME.registerComponent('registerevents', {
 
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
-    <a-assets>
-	<a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
-	</a-assets>
+   
 
     <a-marker type="pattern" url="data/kanji.patt" id="baseMarker" registerevents>
     </a-marker>
-    
+	
+     <a-assets>
+	<a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
+    </a-assets>
+	
     <!-- 
         this entity will move (lerp) towards the marker when visible;
         turns green when marker visible, red when marker not visible
     -->
+	
     <a-entity id="follower" active="0">
       		 position="0 0 0" 
                  rotation="0 0 0"
