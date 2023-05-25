@@ -55,11 +55,7 @@ AFRAME.registerComponent('registerevents', {
             follower.object3D.quaternion.slerp(this.q, lerpAmount);
 			follower.object3D.scale.lerp(this.s, lerpAmount);
             
-            followerPlane.setAttribute("color", "green");
-        } 
-        else
-        {
-            followerPlane.setAttribute("color", "red");            
+                    
         }
     }
 });
