@@ -71,7 +71,7 @@ AFRAME.registerComponent('registerevents', {
 	
    
     <a-assets>
-		<img id="grid" src="images/earth-sphere.jpg" />
+		<video id="grid" src="robot.mp4" />
 	</a-assets>
 
     <a-marker type="pattern" url="data/kanji.patt" id="baseMarker" registerevents>
@@ -85,7 +85,7 @@ AFRAME.registerComponent('registerevents', {
         <a-plane id="followerPlane"
                position="0 0 0"
                rotation="-90 0 0"
-               material="src:#grid; transparent: true; opacity: 0.95; side:double; visible:false;">
+               material="src:#grid; side:double; visible:false;">
         </a-plane>
     </a-entity>
         
